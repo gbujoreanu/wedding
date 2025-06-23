@@ -75,4 +75,11 @@ in a single place.
 
 Feel free to expand this project to include additional features like authentication, guestbook, or email notifications.
 
+### RSVP
+
+The site no longer accepts form submissions. The `/rsvp` page displays a link
+to send an email instead. Update `views/rsvp.ejs` with your own email address
+or replace the link with an external service such as Google Forms if you prefer
+collecting responses elsewhere.
+
 Undefined routes show a simple 404 page with a link back home.
