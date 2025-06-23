@@ -9,11 +9,17 @@ This project provides a simple starting point for building a customizable weddin
    ```bash
    npm install
    ```
-3. Start the development server:
+3. (Optional) Copy `.env.example` to `.env` if you want to change the server
+   port:
    ```bash
-   node app.js
+   cp .env.example .env
+   # edit the PORT value in .env if needed
    ```
-4. Visit `http://localhost:3000` in your browser.
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+5. Visit `http://localhost:3000` in your browser (or the port you configured).
 
 ## Structure
 
