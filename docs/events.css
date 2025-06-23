@@ -1,0 +1,23 @@
+/* Styles specific to the Events page */
+.event-list {
+  padding: 0;
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.event-list li {
+  background: #fff;
+  border-left: 4px solid var(--primary-color);
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.event-list li strong {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
