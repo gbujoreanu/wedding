@@ -5,7 +5,7 @@ This project provides a simple starting point for building a customizable weddin
 ## Setup
 
 1. Install Node.js (already available in this environment).
-2. Install dependencies:
+2. Install dependencies (includes `express-ejs-layouts`):
    ```bash
    npm install
    ```
