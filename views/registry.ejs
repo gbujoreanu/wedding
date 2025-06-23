@@ -10,17 +10,13 @@
 <section class="section">
   <h3 class="page-heading">Gift Ideas</h3>
   <div class="gift-grid">
-    <div class="gift-item">
-      <p><strong>Kitchen Mixer</strong></p>
-      <a href="https://www.amazon.com/dp/B00005UP2P" target="_blank" rel="noopener">View on Amazon</a>
-    </div>
-    <div class="gift-item">
-      <p><strong>Luxury Sheets</strong></p>
-      <a href="https://www.zola.com/registry" target="_blank" rel="noopener">View on Zola</a>
-    </div>
-    <div class="gift-item">
-      <p><strong>Cookware Set</strong></p>
-      <a href="https://www.amazon.com/dp/B01LXWIMKN" target="_blank" rel="noopener">View on Amazon</a>
-    </div>
+    <% if (Array.isArray(gifts)) { %>
+      <% gifts.forEach(function(gift) { %>
+        <div class="gift-item">
+          <p><strong><%= gift.name %></strong></p>
+          <a href="<%= gift.url %>" target="_blank" rel="noopener"><%= gift.linkText || 'View Item' %></a>
+        </div>
+      <% }); %>
+    <% } %>
   </div>
 </section>

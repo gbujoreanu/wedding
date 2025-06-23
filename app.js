@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const rsvpStore = require('./rsvpStore');
+const giftStore = require('./giftStore');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -39,7 +40,8 @@ app.get('/things-to-do', (req, res) => {
 });
 
 app.get('/registry', (req, res) => {
-  res.render('registry', { title: 'Registry', extraCss: '/registry.css' });
+  const gifts = giftStore.getAll();
+  res.render('registry', { title: 'Registry', extraCss: '/registry.css', gifts });
 });
 
 app.get('/rsvp', (req, res) => {
