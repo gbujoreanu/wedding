@@ -27,9 +27,9 @@ body {
 }
 
 .site-header {
-  background-color: var(--secondary-color);
-  /* Image of a wedding ceremony in a forest */
-  background-image: url('https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=1350&q=80');
+  background-color: #0b3d26;
+  /* Image of a forest wedding venue */
+  background-image: url('https://source.unsplash.com/1600x900/?forest,wedding');
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -69,7 +69,7 @@ body {
 
 
 .site-footer {
-  background: var(--primary-color);
+  background: #3d6937;
   color: #fff;
   text-align: center;
   padding: 2rem 1rem;
