@@ -15,24 +15,12 @@
 <body>
   <header class="site-header">
     <h1 class="site-title">We're Getting Married!</h1>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/events">Events</a></li>
-        <li><a href="/travel">Travel</a></li>
-        <li><a href="/wedding-party">Wedding Party</a></li>
-        <li><a href="/things-to-do">Things to Do</a></li>
-        <li><a href="/registry">Registry</a></li>
-        <li><a href="/rsvp">RSVP</a></li>
-      </ul>
-    </nav>
+    <%- include('partials/nav') %>
   </header>
   <main class="site-main">
     <%- body %>
   </main>
-  <footer class="site-footer">
-    <p>&copy; <%= new Date().getFullYear() %> Our Wedding</p>
-  </footer>
+  <%- include('partials/footer') %>
 <script src="/script.js"></script>
 </body>
 </html>
