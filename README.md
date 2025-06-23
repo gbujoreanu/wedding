@@ -46,6 +46,11 @@ from `public/`. When hosting with GitHub Pages, set the Pages source to the
 `.github/workflows/gh-pages.yml` builds the site and publishes the `docs/`
 folder to GitHub Pages whenever changes are pushed to the `main` branch.
 
+When deploying to `https://<user>.github.io/<repo>/`, set `BASE_URL` to the
+repository name (for example `BASE_URL=/wedding`) so that asset paths resolve
+correctly. You can add this variable to a `.env` file or export it in your shell
+before running `npm run build`.
+
 ### Editing templates
 
 The page layouts live under `views/`. Update these `.ejs` files to change page
