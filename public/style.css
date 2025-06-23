@@ -28,7 +28,8 @@ body {
 
 .site-header {
   background-color: var(--secondary-color);
-  background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1350&q=80');
+  /* Image of a wedding ceremony in a forest */
+  background-image: url('https://images.unsplash.com/photo-1525253086316-d0c936c814f8?auto=format&fit=crop&w=1350&q=80');
   background-size: cover;
   background-position: center;
   color: #fff;
