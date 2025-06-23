@@ -32,6 +32,18 @@ npm start
 
 The server reloads on each start, so restart it after changing server code.
 
+### Building static files
+
+Generate a static version of the site by running:
+
+```bash
+npm run build
+```
+
+This renders the templates into the `docs/` folder and copies over the assets
+from `public/`. When hosting with GitHub Pages, set the Pages source to the
+`docs/` directory so the generated HTML is served.
+
 ### Editing templates
 
 The page layouts live under `views/`. Update these `.ejs` files to change page
