@@ -42,7 +42,9 @@ npm run build
 
 This renders the templates into the `docs/` folder and copies over the assets
 from `public/`. When hosting with GitHub Pages, set the Pages source to the
-`docs/` directory so the generated HTML is served.
+`docs/` directory so the generated HTML is served. The workflow defined in
+`.github/workflows/gh-pages.yml` builds the site and publishes the `docs/`
+folder to GitHub Pages whenever changes are pushed to the `main` branch.
 
 ### Editing templates
 
