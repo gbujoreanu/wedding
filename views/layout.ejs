@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="<%= baseUrl %>/style.css">
   <% if (typeof extraCss !== 'undefined') { %>
   <link rel="stylesheet" href="<%= extraCss %>">
   <% } %>
@@ -21,6 +21,6 @@
     <%- body %>
   </main>
   <%- include('partials/footer') %>
-<script src="/script.js"></script>
+<script src="<%= baseUrl %>/script.js"></script>
 </body>
 </html>

@@ -1,20 +1,23 @@
+require('dotenv').config();
 const fs = require('fs/promises');
 const path = require('path');
 const ejs = require('ejs');
+
+const BASE_URL = process.env.BASE_URL || '';
 
 const viewsDir = path.join(__dirname, 'views');
 const publicDir = path.join(__dirname, 'public');
 const outDir = path.join(__dirname, 'docs');
 
 const pages = [
-  { template: 'index', data: { title: 'Home' }, output: 'index.html' },
-  { template: 'events', data: { title: 'Events', extraCss: '/events.css' }, output: path.join('events', 'index.html') },
-  { template: 'travel', data: { title: 'Travel', extraCss: '/travel.css' }, output: path.join('travel', 'index.html') },
-  { template: 'wedding-party', data: { title: 'Wedding Party' }, output: path.join('wedding-party', 'index.html') },
-  { template: 'things-to-do', data: { title: 'Things to Do' }, output: path.join('things-to-do', 'index.html') },
-  { template: 'registry', data: { title: 'Registry', extraCss: '/registry.css' }, output: path.join('registry', 'index.html') },
-  { template: 'rsvp', data: { title: 'RSVP', extraCss: '/rsvp.css' }, output: path.join('rsvp', 'index.html') },
-  { template: '404', data: { title: 'Not Found' }, output: '404.html' },
+  { template: 'index', data: { title: 'Home', baseUrl: BASE_URL }, output: 'index.html' },
+  { template: 'events', data: { title: 'Events', extraCss: `${BASE_URL}/events.css`, baseUrl: BASE_URL }, output: path.join('events', 'index.html') },
+  { template: 'travel', data: { title: 'Travel', extraCss: `${BASE_URL}/travel.css`, baseUrl: BASE_URL }, output: path.join('travel', 'index.html') },
+  { template: 'wedding-party', data: { title: 'Wedding Party', baseUrl: BASE_URL }, output: path.join('wedding-party', 'index.html') },
+  { template: 'things-to-do', data: { title: 'Things to Do', baseUrl: BASE_URL }, output: path.join('things-to-do', 'index.html') },
+  { template: 'registry', data: { title: 'Registry', extraCss: `${BASE_URL}/registry.css`, baseUrl: BASE_URL }, output: path.join('registry', 'index.html') },
+  { template: 'rsvp', data: { title: 'RSVP', extraCss: `${BASE_URL}/rsvp.css`, baseUrl: BASE_URL }, output: path.join('rsvp', 'index.html') },
+  { template: '404', data: { title: 'Not Found', baseUrl: BASE_URL }, output: '404.html' },
 ];
 
 async function buildPage(page) {
