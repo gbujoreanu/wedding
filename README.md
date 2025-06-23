@@ -26,3 +26,5 @@ This project provides a simple starting point for building a customizable weddin
 Edit the templates in `views/` to add content such as travel info, registry links, photo galleries, etc. Update `public/style.css` for your own styles.
 
 Feel free to expand this project to include additional features like authentication, guestbook, or email notifications.
+
+Undefined routes show a simple 404 page with a link back home.
