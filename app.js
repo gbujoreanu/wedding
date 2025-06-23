@@ -30,6 +30,14 @@ app.get('/travel', (req, res) => {
   res.render('travel', { title: 'Travel' });
 });
 
+app.get('/wedding-party', (req, res) => {
+  res.render('wedding-party', { title: 'Wedding Party' });
+});
+
+app.get('/things-to-do', (req, res) => {
+  res.render('things-to-do', { title: 'Things to Do' });
+});
+
 app.get('/registry', (req, res) => {
   res.render('registry', { title: 'Registry', extraCss: '/registry.css' });
 });
