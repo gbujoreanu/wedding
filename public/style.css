@@ -113,3 +113,27 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/* Optional content sections for consistent spacing */
+.section {
+  margin-bottom: 2rem;
+}
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+  .site-main {
+    padding: 3rem 2rem;
+  }
+  .site-header {
+    padding: 6rem 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .site-title {
+    font-size: 4rem;
+  }
+  .main-nav ul {
+    gap: 2rem;
+  }
+}
