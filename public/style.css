@@ -36,12 +36,33 @@ body {
   color: #fff;
   padding: 4rem 1rem;
   text-align: center;
+  position: relative;
 }
+
 
 .site-title {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
   margin: 0 0 1rem;
+}
+
+.nav-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.main-nav {
+  display: none;
+}
+
+.main-nav.open {
+  display: block;
 }
 
 
@@ -128,6 +149,12 @@ body {
   }
   .site-header {
     padding: 6rem 2rem;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .main-nav {
+    display: block;
   }
 }
 
