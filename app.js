@@ -31,7 +31,7 @@ app.get('/travel', (req, res) => {
 });
 
 app.get('/registry', (req, res) => {
-  res.render('registry', { title: 'Registry' });
+  res.render('registry', { title: 'Registry', extraCss: '/registry.css' });
 });
 
 app.get('/rsvp', (req, res) => {

@@ -1,22 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #8751ff;
+  --secondary-color: #ffeaf2;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.5;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  color: #333;
+  background-color: #fafafa;
 }
+
 
 .site-main {
   flex: 1;
-  padding: 1rem;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .site-header {
-  background: #e8d8ff;
-  padding: 1rem;
+  background-color: var(--secondary-color);
+  /* Subtle forest image for a natural feel */
+  background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 4rem 1rem;
+  text-align: center;
 }
+
+.site-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin: 0 0 1rem;
+}
+
 
 .main-nav ul {
   list-style: none;
@@ -24,21 +50,38 @@ body {
   padding: 0;
   display: flex;
   gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
+
 
 .main-nav a {
   text-decoration: none;
-  color: inherit;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
 }
+
 
 .main-nav a:hover {
-  text-decoration: underline;
+  border-bottom: 2px solid #fff;
 }
 
+
 .site-footer {
-  background: #eee;
+  background: var(--primary-color);
+  color: #fff;
   text-align: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
+  margin-top: auto;
+}
+
+
+.page-heading {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-color);
+  text-align: center;
+  margin-top: 0;
 }
 
 .input-error {
@@ -48,4 +91,26 @@ body {
 .form-error {
   color: red;
   margin-bottom: 1rem;
+}
+
+.event-list {
+  list-style: none;
+  padding: 0;
+}
+
+.event-list li {
+  margin-bottom: 0.5rem;
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.rsvp-form label {
+  display: flex;
+  flex-direction: column;
 }
