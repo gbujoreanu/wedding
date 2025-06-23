@@ -1,6 +1,16 @@
 console.log('Welcome to the wedding site');
 
 document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('.main-nav');
+  const toggle = document.querySelector('.nav-toggle');
+  if (toggle && nav) {
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+      const expanded = nav.classList.contains('open');
+      toggle.setAttribute('aria-expanded', expanded);
+    });
+  }
+
   const form = document.querySelector('form[action="/rsvp"]');
   if (!form) return;
 
