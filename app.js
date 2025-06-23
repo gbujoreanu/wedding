@@ -1,9 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser');
-const rsvpStore = require('./rsvpStore');
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -15,7 +12,6 @@ app.set('layout', 'layout');
 
 // Static assets
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
 app.get('/', (req, res) => {
@@ -46,11 +42,6 @@ app.get('/rsvp', (req, res) => {
   res.render('rsvp', { title: 'RSVP', extraCss: '/rsvp.css' });
 });
 
-app.post('/rsvp', (req, res) => {
-  console.log('RSVP submission:', req.body);
-  rsvpStore.addRsvp(req.body);
-  res.render('rsvp-success', { title: 'RSVP Success', data: req.body });
-});
 
 // 404 handler
 app.use((req, res) => res.status(404).render('404', { title: 'Not Found' }));
