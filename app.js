@@ -35,6 +35,9 @@ app.post('/rsvp', (req, res) => {
   res.render('rsvp-success', { data: req.body });
 });
 
+// 404 handler
+app.use((req, res) => res.status(404).render('404'));
+
 app.listen(PORT, () => {
   console.log(`Wedding website running at http://localhost:${PORT}`);
 });
