@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
+const rsvpStore = require('./rsvpStore');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -29,8 +30,8 @@ app.get('/rsvp', (req, res) => {
 });
 
 app.post('/rsvp', (req, res) => {
-  // For demonstration, just log to console. In production you'd save to DB or send email.
   console.log('RSVP submission:', req.body);
+  rsvpStore.addRsvp(req.body);
   res.render('rsvp-success', { data: req.body });
 });
 
