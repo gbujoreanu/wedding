@@ -23,11 +23,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/events', (req, res) => {
-  res.render('events', { title: 'Events' });
+  res.render('events', { title: 'Events', extraCss: '/events.css' });
 });
 
 app.get('/travel', (req, res) => {
-  res.render('travel', { title: 'Travel' });
+  res.render('travel', { title: 'Travel', extraCss: '/travel.css' });
 });
 
 app.get('/wedding-party', (req, res) => {
@@ -43,7 +43,7 @@ app.get('/registry', (req, res) => {
 });
 
 app.get('/rsvp', (req, res) => {
-  res.render('rsvp', { title: 'RSVP' });
+  res.render('rsvp', { title: 'RSVP', extraCss: '/rsvp.css' });
 });
 
 app.post('/rsvp', (req, res) => {
