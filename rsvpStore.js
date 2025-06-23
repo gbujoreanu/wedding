@@ -4,6 +4,11 @@ const path = require('path');
 const DATA_DIR = path.join(__dirname, 'data');
 const FILE_PATH = path.join(DATA_DIR, 'rsvps.json');
 
+// Ensure the data directory exists before any file operations occur
+if (!fs.existsSync(DATA_DIR)) {
+  fs.mkdirSync(DATA_DIR, { recursive: true });
+}
+
 function readRsvps() {
   try {
     const raw = fs.readFileSync(FILE_PATH, 'utf8');
