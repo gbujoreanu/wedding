@@ -25,11 +25,11 @@ This project provides a simple starting point for building a customizable weddin
 
 - `app.js` – main Express server.
 - `views/` – EJS templates for each page (home, events, travel, registry, RSVP).
-- `public/` – static assets like CSS and JS.
+- `public/` – static assets like CSS and JS. `registry.css` provides extra styles for the registry page.
 
 ## Customization
 
-Edit the templates in `views/` to add content. Dedicated pages for travel details and the gift registry are available at `/travel` and `/registry`. Customize these by editing `views/travel.ejs` and `views/registry.ejs`. Update `public/style.css` for your own styles.
+Edit the templates in `views/` to add content. Dedicated pages for travel details and the gift registry are available at `/travel` and `/registry`. Customize these by editing `views/travel.ejs` and `views/registry.ejs`. Update `public/style.css` (and `registry.css` for the registry page) to tweak fonts, colors, or layout.
 
 Feel free to expand this project to include additional features like authentication, guestbook, or email notifications.
 
