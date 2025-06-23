@@ -19,33 +19,33 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', { title: 'Home' });
 });
 
 app.get('/events', (req, res) => {
-  res.render('events');
+  res.render('events', { title: 'Events' });
 });
 
 app.get('/travel', (req, res) => {
-  res.render('travel');
+  res.render('travel', { title: 'Travel' });
 });
 
 app.get('/registry', (req, res) => {
-  res.render('registry');
+  res.render('registry', { title: 'Registry' });
 });
 
 app.get('/rsvp', (req, res) => {
-  res.render('rsvp');
+  res.render('rsvp', { title: 'RSVP' });
 });
 
 app.post('/rsvp', (req, res) => {
   console.log('RSVP submission:', req.body);
   rsvpStore.addRsvp(req.body);
-  res.render('rsvp-success', { data: req.body });
+  res.render('rsvp-success', { title: 'RSVP Success', data: req.body });
 });
 
 // 404 handler
-app.use((req, res) => res.status(404).render('404'));
+app.use((req, res) => res.status(404).render('404', { title: 'Not Found' }));
 
 app.listen(PORT, () => {
   console.log(`Wedding website running at http://localhost:${PORT}`);
